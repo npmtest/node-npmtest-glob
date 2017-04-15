@@ -1,6 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <title>Code coverage report for node-npmtest-glob/glob/common.js</title>
     <meta charset="utf-8">
     <style>
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-glob/glob/</a> &#187; common.js</div>
+    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-glob/glob/</a> » common.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -706,8 +704,8 @@ exports.mark = mark
 exports.isIgnored = isIgnored
 exports.childrenIgnored = childrenIgnored
 &nbsp;
-<span class="fstat-no" title="function not covered" >function ownProp (obj, field) {</span>
-<span class="cstat-no" title="statement not covered" >  return Object.prototype.hasOwnProperty.call(obj, field)</span>
+<span class="fstat-no" title="function not covered">function ownProp (obj, field) {</span>
+<span class="cstat-no" title="statement not covered">  return Object.prototype.hasOwnProperty.call(obj, field)</span>
 }
 &nbsp;
 var path = require("path")
@@ -715,233 +713,234 @@ var minimatch = require("minimatch")
 var isAbsolute = require("path-is-absolute")
 var Minimatch = minimatch.Minimatch
 &nbsp;
-<span class="fstat-no" title="function not covered" >function alphasorti (a, b) {</span>
-<span class="cstat-no" title="statement not covered" >  return a.toLowerCase().localeCompare(b.toLowerCase())</span>
+<span class="fstat-no" title="function not covered">function alphasorti (a, b) {</span>
+<span class="cstat-no" title="statement not covered">  return a.toLowerCase().localeCompare(b.toLowerCase())</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function alphasort (a, b) {</span>
-<span class="cstat-no" title="statement not covered" >  return a.localeCompare(b)</span>
+<span class="fstat-no" title="function not covered">function alphasort (a, b) {</span>
+<span class="cstat-no" title="statement not covered">  return a.localeCompare(b)</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function setupIgnores (self, options) {</span>
-<span class="cstat-no" title="statement not covered" >  self.ignore = options.ignore || []</span>
+<span class="fstat-no" title="function not covered">function setupIgnores (self, options) {</span>
+<span class="cstat-no" title="statement not covered">  self.ignore = options.ignore || []</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!Array.isArray(self.ignore))</span>
-<span class="cstat-no" title="statement not covered" >    self.ignore = [self.ignore]</span>
+<span class="cstat-no" title="statement not covered">  if (!Array.isArray(self.ignore))</span>
+<span class="cstat-no" title="statement not covered">    self.ignore = [self.ignore]</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (self.ignore.length) {</span>
-<span class="cstat-no" title="statement not covered" >    self.ignore = self.ignore.map(ignoreMap)</span>
+<span class="cstat-no" title="statement not covered">  if (self.ignore.length) {</span>
+<span class="cstat-no" title="statement not covered">    self.ignore = self.ignore.map(ignoreMap)</span>
   }
 }
 &nbsp;
 // ignore patterns are always in dot:true mode.
-<span class="fstat-no" title="function not covered" >function ignoreMap (pattern) {</span>
-<span class="cstat-no" title="statement not covered" >  var gmatcher = null</span>
-<span class="cstat-no" title="statement not covered" >  if (pattern.slice(-3) === '/**') {</span>
-<span class="cstat-no" title="statement not covered" >    var gpattern = pattern.replace(/(\/\*\*)+$/, '')</span>
-<span class="cstat-no" title="statement not covered" >    gmatcher = new Minimatch(gpattern, { dot: true })</span>
+<span class="fstat-no" title="function not covered">function ignoreMap (pattern) {</span>
+<span class="cstat-no" title="statement not covered">  var gmatcher = null</span>
+<span class="cstat-no" title="statement not covered">  if (pattern.slice(-3) === '/**') {</span>
+<span class="cstat-no" title="statement not covered">    var gpattern = pattern.replace(/(\/\*\*)+$/, '')</span>
+<span class="cstat-no" title="statement not covered">    gmatcher = new Minimatch(gpattern, { dot: true })</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return {</span>
+<span class="cstat-no" title="statement not covered">  return {</span>
     matcher: new Minimatch(pattern, { dot: true }),
     gmatcher: gmatcher
   }
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function setopts (self, pattern, options) {</span>
-<span class="cstat-no" title="statement not covered" >  if (!options)</span>
-<span class="cstat-no" title="statement not covered" >    options = {}</span>
+<span class="fstat-no" title="function not covered">function setopts (self, pattern, options) {</span>
+<span class="cstat-no" title="statement not covered">  if (!options)</span>
+<span class="cstat-no" title="statement not covered">    options = {}</span>
 &nbsp;
   // base-matching: just use globstar for that.
-<span class="cstat-no" title="statement not covered" >  if (options.matchBase &amp;&amp; -1 === pattern.indexOf("/")) {</span>
-<span class="cstat-no" title="statement not covered" >    if (options.noglobstar) {</span>
-<span class="cstat-no" title="statement not covered" >      throw new Error("base matching requires globstar")</span>
+<span class="cstat-no" title="statement not covered">  if (options.matchBase &amp;&amp; -1 === pattern.indexOf("/")) {</span>
+<span class="cstat-no" title="statement not covered">    if (options.noglobstar) {</span>
+<span class="cstat-no" title="statement not covered">      throw new Error("base matching requires globstar")</span>
     }
-<span class="cstat-no" title="statement not covered" >    pattern = "**/" + pattern</span>
+<span class="cstat-no" title="statement not covered">    pattern = "**/" + pattern</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  self.silent = !!options.silent</span>
-<span class="cstat-no" title="statement not covered" >  self.pattern = pattern</span>
-<span class="cstat-no" title="statement not covered" >  self.strict = options.strict !== false</span>
-<span class="cstat-no" title="statement not covered" >  self.realpath = !!options.realpath</span>
-<span class="cstat-no" title="statement not covered" >  self.realpathCache = options.realpathCache || Object.create(null)</span>
-<span class="cstat-no" title="statement not covered" >  self.follow = !!options.follow</span>
-<span class="cstat-no" title="statement not covered" >  self.dot = !!options.dot</span>
-<span class="cstat-no" title="statement not covered" >  self.mark = !!options.mark</span>
-<span class="cstat-no" title="statement not covered" >  self.nodir = !!options.nodir</span>
-<span class="cstat-no" title="statement not covered" >  if (self.nodir)</span>
-<span class="cstat-no" title="statement not covered" >    self.mark = true</span>
-<span class="cstat-no" title="statement not covered" >  self.sync = !!options.sync</span>
-<span class="cstat-no" title="statement not covered" >  self.nounique = !!options.nounique</span>
-<span class="cstat-no" title="statement not covered" >  self.nonull = !!options.nonull</span>
-<span class="cstat-no" title="statement not covered" >  self.nosort = !!options.nosort</span>
-<span class="cstat-no" title="statement not covered" >  self.nocase = !!options.nocase</span>
-<span class="cstat-no" title="statement not covered" >  self.stat = !!options.stat</span>
-<span class="cstat-no" title="statement not covered" >  self.noprocess = !!options.noprocess</span>
-<span class="cstat-no" title="statement not covered" >  self.absolute = !!options.absolute</span>
+<span class="cstat-no" title="statement not covered">  self.silent = !!options.silent</span>
+<span class="cstat-no" title="statement not covered">  self.pattern = pattern</span>
+<span class="cstat-no" title="statement not covered">  self.strict = options.strict !== false</span>
+<span class="cstat-no" title="statement not covered">  self.realpath = !!options.realpath</span>
+<span class="cstat-no" title="statement not covered">  self.realpathCache = options.realpathCache || Object.create(null)</span>
+<span class="cstat-no" title="statement not covered">  self.follow = !!options.follow</span>
+<span class="cstat-no" title="statement not covered">  self.dot = !!options.dot</span>
+<span class="cstat-no" title="statement not covered">  self.mark = !!options.mark</span>
+<span class="cstat-no" title="statement not covered">  self.nodir = !!options.nodir</span>
+<span class="cstat-no" title="statement not covered">  if (self.nodir)</span>
+<span class="cstat-no" title="statement not covered">    self.mark = true</span>
+<span class="cstat-no" title="statement not covered">  self.sync = !!options.sync</span>
+<span class="cstat-no" title="statement not covered">  self.nounique = !!options.nounique</span>
+<span class="cstat-no" title="statement not covered">  self.nonull = !!options.nonull</span>
+<span class="cstat-no" title="statement not covered">  self.nosort = !!options.nosort</span>
+<span class="cstat-no" title="statement not covered">  self.nocase = !!options.nocase</span>
+<span class="cstat-no" title="statement not covered">  self.stat = !!options.stat</span>
+<span class="cstat-no" title="statement not covered">  self.noprocess = !!options.noprocess</span>
+<span class="cstat-no" title="statement not covered">  self.absolute = !!options.absolute</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  self.maxLength = options.maxLength || Infinity</span>
-<span class="cstat-no" title="statement not covered" >  self.cache = options.cache || Object.create(null)</span>
-<span class="cstat-no" title="statement not covered" >  self.statCache = options.statCache || Object.create(null)</span>
-<span class="cstat-no" title="statement not covered" >  self.symlinks = options.symlinks || Object.create(null)</span>
+<span class="cstat-no" title="statement not covered">  self.maxLength = options.maxLength || Infinity</span>
+<span class="cstat-no" title="statement not covered">  self.cache = options.cache || Object.create(null)</span>
+<span class="cstat-no" title="statement not covered">  self.statCache = options.statCache || Object.create(null)</span>
+<span class="cstat-no" title="statement not covered">  self.symlinks = options.symlinks || Object.create(null)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  setupIgnores(self, options)</span>
+<span class="cstat-no" title="statement not covered">  setupIgnores(self, options)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  self.changedCwd = false</span>
-<span class="cstat-no" title="statement not covered" >  var cwd = process.cwd()</span>
-<span class="cstat-no" title="statement not covered" >  if (!ownProp(options, "cwd"))</span>
-<span class="cstat-no" title="statement not covered" >    self.cwd = cwd</span>
+<span class="cstat-no" title="statement not covered">  self.changedCwd = false</span>
+<span class="cstat-no" title="statement not covered">  var cwd = process.cwd()</span>
+<span class="cstat-no" title="statement not covered">  if (!ownProp(options, "cwd"))</span>
+<span class="cstat-no" title="statement not covered">    self.cwd = cwd</span>
   else {
-<span class="cstat-no" title="statement not covered" >    self.cwd = path.resolve(options.cwd)</span>
-<span class="cstat-no" title="statement not covered" >    self.changedCwd = self.cwd !== cwd</span>
+<span class="cstat-no" title="statement not covered">    self.cwd = path.resolve(options.cwd)</span>
+<span class="cstat-no" title="statement not covered">    self.changedCwd = self.cwd !== cwd</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  self.root = options.root || path.resolve(self.cwd, "/")</span>
-<span class="cstat-no" title="statement not covered" >  self.root = path.resolve(self.root)</span>
-<span class="cstat-no" title="statement not covered" >  if (process.platform === "win32")</span>
-<span class="cstat-no" title="statement not covered" >    self.root = self.root.replace(/\\/g, "/")</span>
+<span class="cstat-no" title="statement not covered">  self.root = options.root || path.resolve(self.cwd, "/")</span>
+<span class="cstat-no" title="statement not covered">  self.root = path.resolve(self.root)</span>
+<span class="cstat-no" title="statement not covered">  if (process.platform === "win32")</span>
+<span class="cstat-no" title="statement not covered">    self.root = self.root.replace(/\\/g, "/")</span>
 &nbsp;
   // TODO: is an absolute `cwd` supposed to be resolved against `root`?
   // e.g. { cwd: '/test', root: __dirname } === path.join(__dirname, '/test')
-<span class="cstat-no" title="statement not covered" >  self.cwdAbs = isAbsolute(self.cwd) ? self.cwd : makeAbs(self, self.cwd)</span>
-<span class="cstat-no" title="statement not covered" >  if (process.platform === "win32")</span>
-<span class="cstat-no" title="statement not covered" >    self.cwdAbs = self.cwdAbs.replace(/\\/g, "/")</span>
-<span class="cstat-no" title="statement not covered" >  self.nomount = !!options.nomount</span>
+<span class="cstat-no" title="statement not covered">  self.cwdAbs = isAbsolute(self.cwd) ? self.cwd : makeAbs(self, self.cwd)</span>
+<span class="cstat-no" title="statement not covered">  if (process.platform === "win32")</span>
+<span class="cstat-no" title="statement not covered">    self.cwdAbs = self.cwdAbs.replace(/\\/g, "/")</span>
+<span class="cstat-no" title="statement not covered">  self.nomount = !!options.nomount</span>
 &nbsp;
   // disable comments and negation in Minimatch.
   // Note that they are not supported in Glob itself anyway.
-<span class="cstat-no" title="statement not covered" >  options.nonegate = true</span>
-<span class="cstat-no" title="statement not covered" >  options.nocomment = true</span>
+<span class="cstat-no" title="statement not covered">  options.nonegate = true</span>
+<span class="cstat-no" title="statement not covered">  options.nocomment = true</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  self.minimatch = new Minimatch(pattern, options)</span>
-<span class="cstat-no" title="statement not covered" >  self.options = self.minimatch.options</span>
+<span class="cstat-no" title="statement not covered">  self.minimatch = new Minimatch(pattern, options)</span>
+<span class="cstat-no" title="statement not covered">  self.options = self.minimatch.options</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function finish (self) {</span>
-<span class="cstat-no" title="statement not covered" >  var nou = self.nounique</span>
-<span class="cstat-no" title="statement not covered" >  var all = nou ? [] : Object.create(null)</span>
+<span class="fstat-no" title="function not covered">function finish (self) {</span>
+<span class="cstat-no" title="statement not covered">  var nou = self.nounique</span>
+<span class="cstat-no" title="statement not covered">  var all = nou ? [] : Object.create(null)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  for (var i = 0, l = self.matches.length; i &lt; l; i ++) {</span>
-<span class="cstat-no" title="statement not covered" >    var matches = self.matches[i]</span>
-<span class="cstat-no" title="statement not covered" >    if (!matches || Object.keys(matches).length === 0) {</span>
-<span class="cstat-no" title="statement not covered" >      if (self.nonull) {</span>
+<span class="cstat-no" title="statement not covered">  for (var i = 0, l = self.matches.length; i &lt; l; i ++) {</span>
+<span class="cstat-no" title="statement not covered">    var matches = self.matches[i]</span>
+<span class="cstat-no" title="statement not covered">    if (!matches || Object.keys(matches).length === 0) {</span>
+<span class="cstat-no" title="statement not covered">      if (self.nonull) {</span>
         // do like the shell, and spit out the literal glob
-<span class="cstat-no" title="statement not covered" >        var literal = self.minimatch.globSet[i]</span>
-<span class="cstat-no" title="statement not covered" >        if (nou)</span>
-<span class="cstat-no" title="statement not covered" >          all.push(literal)</span>
+<span class="cstat-no" title="statement not covered">        var literal = self.minimatch.globSet[i]</span>
+<span class="cstat-no" title="statement not covered">        if (nou)</span>
+<span class="cstat-no" title="statement not covered">          all.push(literal)</span>
         else
-<span class="cstat-no" title="statement not covered" >          all[literal] = true</span>
+<span class="cstat-no" title="statement not covered">          all[literal] = true</span>
       }
     } else {
       // had matches
-<span class="cstat-no" title="statement not covered" >      var m = Object.keys(matches)</span>
-<span class="cstat-no" title="statement not covered" >      if (nou)</span>
-<span class="cstat-no" title="statement not covered" >        all.push.apply(all, m)</span>
+<span class="cstat-no" title="statement not covered">      var m = Object.keys(matches)</span>
+<span class="cstat-no" title="statement not covered">      if (nou)</span>
+<span class="cstat-no" title="statement not covered">        all.push.apply(all, m)</span>
       else
-<span class="cstat-no" title="statement not covered" >        m.forEach(<span class="fstat-no" title="function not covered" >function (m) {</span></span>
-<span class="cstat-no" title="statement not covered" >          all[m] = true</span>
+<span class="cstat-no" title="statement not covered">        m.forEach(<span class="fstat-no" title="function not covered">function (m) {</span></span>
+<span class="cstat-no" title="statement not covered">          all[m] = true</span>
         })
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!nou)</span>
-<span class="cstat-no" title="statement not covered" >    all = Object.keys(all)</span>
+<span class="cstat-no" title="statement not covered">  if (!nou)</span>
+<span class="cstat-no" title="statement not covered">    all = Object.keys(all)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!self.nosort)</span>
-<span class="cstat-no" title="statement not covered" >    all = all.sort(self.nocase ? alphasorti : alphasort)</span>
+<span class="cstat-no" title="statement not covered">  if (!self.nosort)</span>
+<span class="cstat-no" title="statement not covered">    all = all.sort(self.nocase ? alphasorti : alphasort)</span>
 &nbsp;
   // at *some* point we statted all of these
-<span class="cstat-no" title="statement not covered" >  if (self.mark) {</span>
-<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; all.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >      all[i] = self._mark(all[i])</span>
+<span class="cstat-no" title="statement not covered">  if (self.mark) {</span>
+<span class="cstat-no" title="statement not covered">    for (var i = 0; i &lt; all.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">      all[i] = self._mark(all[i])</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (self.nodir) {</span>
-<span class="cstat-no" title="statement not covered" >      all = all.filter(<span class="fstat-no" title="function not covered" >function (e) {</span></span>
-<span class="cstat-no" title="statement not covered" >        var notDir = !(/\/$/.test(e))</span>
-<span class="cstat-no" title="statement not covered" >        var c = self.cache[e] || self.cache[makeAbs(self, e)]</span>
-<span class="cstat-no" title="statement not covered" >        if (notDir &amp;&amp; c)</span>
-<span class="cstat-no" title="statement not covered" >          notDir = c !== 'DIR' &amp;&amp; !Array.isArray(c)</span>
-<span class="cstat-no" title="statement not covered" >        return notDir</span>
+<span class="cstat-no" title="statement not covered">    if (self.nodir) {</span>
+<span class="cstat-no" title="statement not covered">      all = all.filter(<span class="fstat-no" title="function not covered">function (e) {</span></span>
+<span class="cstat-no" title="statement not covered">        var notDir = !(/\/$/.test(e))</span>
+<span class="cstat-no" title="statement not covered">        var c = self.cache[e] || self.cache[makeAbs(self, e)]</span>
+<span class="cstat-no" title="statement not covered">        if (notDir &amp;&amp; c)</span>
+<span class="cstat-no" title="statement not covered">          notDir = c !== 'DIR' &amp;&amp; !Array.isArray(c)</span>
+<span class="cstat-no" title="statement not covered">        return notDir</span>
       })
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (self.ignore.length)</span>
-<span class="cstat-no" title="statement not covered" >    all = all.filter(<span class="fstat-no" title="function not covered" >function(m) {</span></span>
-<span class="cstat-no" title="statement not covered" >      return !isIgnored(self, m)</span>
+<span class="cstat-no" title="statement not covered">  if (self.ignore.length)</span>
+<span class="cstat-no" title="statement not covered">    all = all.filter(<span class="fstat-no" title="function not covered">function(m) {</span></span>
+<span class="cstat-no" title="statement not covered">      return !isIgnored(self, m)</span>
     })
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  self.found = all</span>
+<span class="cstat-no" title="statement not covered">  self.found = all</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function mark (self, p) {</span>
-<span class="cstat-no" title="statement not covered" >  var abs = makeAbs(self, p)</span>
-<span class="cstat-no" title="statement not covered" >  var c = self.cache[abs]</span>
-<span class="cstat-no" title="statement not covered" >  var m = p</span>
-<span class="cstat-no" title="statement not covered" >  if (c) {</span>
-<span class="cstat-no" title="statement not covered" >    var isDir = c === 'DIR' || Array.isArray(c)</span>
-<span class="cstat-no" title="statement not covered" >    var slash = p.slice(-1) === '/'</span>
+<span class="fstat-no" title="function not covered">function mark (self, p) {</span>
+<span class="cstat-no" title="statement not covered">  var abs = makeAbs(self, p)</span>
+<span class="cstat-no" title="statement not covered">  var c = self.cache[abs]</span>
+<span class="cstat-no" title="statement not covered">  var m = p</span>
+<span class="cstat-no" title="statement not covered">  if (c) {</span>
+<span class="cstat-no" title="statement not covered">    var isDir = c === 'DIR' || Array.isArray(c)</span>
+<span class="cstat-no" title="statement not covered">    var slash = p.slice(-1) === '/'</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (isDir &amp;&amp; !slash)</span>
-<span class="cstat-no" title="statement not covered" >      m += '/'</span>
-    else <span class="cstat-no" title="statement not covered" >if (!isDir &amp;&amp; slash)</span>
-<span class="cstat-no" title="statement not covered" >      m = m.slice(0, -1)</span>
+<span class="cstat-no" title="statement not covered">    if (isDir &amp;&amp; !slash)</span>
+<span class="cstat-no" title="statement not covered">      m += '/'</span>
+    else <span class="cstat-no" title="statement not covered">if (!isDir &amp;&amp; slash)</span>
+<span class="cstat-no" title="statement not covered">      m = m.slice(0, -1)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (m !== p) {</span>
-<span class="cstat-no" title="statement not covered" >      var mabs = makeAbs(self, m)</span>
-<span class="cstat-no" title="statement not covered" >      self.statCache[mabs] = self.statCache[abs]</span>
-<span class="cstat-no" title="statement not covered" >      self.cache[mabs] = self.cache[abs]</span>
+<span class="cstat-no" title="statement not covered">    if (m !== p) {</span>
+<span class="cstat-no" title="statement not covered">      var mabs = makeAbs(self, m)</span>
+<span class="cstat-no" title="statement not covered">      self.statCache[mabs] = self.statCache[abs]</span>
+<span class="cstat-no" title="statement not covered">      self.cache[mabs] = self.cache[abs]</span>
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return m</span>
+<span class="cstat-no" title="statement not covered">  return m</span>
 }
 &nbsp;
 // lotta situps...
-<span class="fstat-no" title="function not covered" >function makeAbs (self, f) {</span>
-<span class="cstat-no" title="statement not covered" >  var abs = f</span>
-<span class="cstat-no" title="statement not covered" >  if (f.charAt(0) === '/') {</span>
-<span class="cstat-no" title="statement not covered" >    abs = path.join(self.root, f)</span>
-  } else <span class="cstat-no" title="statement not covered" >if (isAbsolute(f) || f === '') {</span>
-<span class="cstat-no" title="statement not covered" >    abs = f</span>
-  } else <span class="cstat-no" title="statement not covered" >if (self.changedCwd) {</span>
-<span class="cstat-no" title="statement not covered" >    abs = path.resolve(self.cwd, f)</span>
+<span class="fstat-no" title="function not covered">function makeAbs (self, f) {</span>
+<span class="cstat-no" title="statement not covered">  var abs = f</span>
+<span class="cstat-no" title="statement not covered">  if (f.charAt(0) === '/') {</span>
+<span class="cstat-no" title="statement not covered">    abs = path.join(self.root, f)</span>
+  } else <span class="cstat-no" title="statement not covered">if (isAbsolute(f) || f === '') {</span>
+<span class="cstat-no" title="statement not covered">    abs = f</span>
+  } else <span class="cstat-no" title="statement not covered">if (self.changedCwd) {</span>
+<span class="cstat-no" title="statement not covered">    abs = path.resolve(self.cwd, f)</span>
   } else {
-<span class="cstat-no" title="statement not covered" >    abs = path.resolve(f)</span>
+<span class="cstat-no" title="statement not covered">    abs = path.resolve(f)</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (process.platform === 'win32')</span>
-<span class="cstat-no" title="statement not covered" >    abs = abs.replace(/\\/g, '/')</span>
+<span class="cstat-no" title="statement not covered">  if (process.platform === 'win32')</span>
+<span class="cstat-no" title="statement not covered">    abs = abs.replace(/\\/g, '/')</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return abs</span>
+<span class="cstat-no" title="statement not covered">  return abs</span>
 }
 &nbsp;
 &nbsp;
 // Return true, if pattern ends with globstar '**', for the accompanying parent directory.
 // Ex:- If node_modules/** is the pattern, add 'node_modules' to ignore list along with it's contents
-<span class="fstat-no" title="function not covered" >function isIgnored (self, path) {</span>
-<span class="cstat-no" title="statement not covered" >  if (!self.ignore.length)</span>
-<span class="cstat-no" title="statement not covered" >    return false</span>
+<span class="fstat-no" title="function not covered">function isIgnored (self, path) {</span>
+<span class="cstat-no" title="statement not covered">  if (!self.ignore.length)</span>
+<span class="cstat-no" title="statement not covered">    return false</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return self.ignore.some(<span class="fstat-no" title="function not covered" >function(item) {</span></span>
-<span class="cstat-no" title="statement not covered" >    return item.matcher.match(path) || !!(item.gmatcher &amp;&amp; item.gmatcher.match(path))</span>
+<span class="cstat-no" title="statement not covered">  return self.ignore.some(<span class="fstat-no" title="function not covered">function(item) {</span></span>
+<span class="cstat-no" title="statement not covered">    return item.matcher.match(path) || !!(item.gmatcher &amp;&amp; item.gmatcher.match(path))</span>
   })
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function childrenIgnored (self, path) {</span>
-<span class="cstat-no" title="statement not covered" >  if (!self.ignore.length)</span>
-<span class="cstat-no" title="statement not covered" >    return false</span>
+<span class="fstat-no" title="function not covered">function childrenIgnored (self, path) {</span>
+<span class="cstat-no" title="statement not covered">  if (!self.ignore.length)</span>
+<span class="cstat-no" title="statement not covered">    return false</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return self.ignore.some(<span class="fstat-no" title="function not covered" >function(item) {</span></span>
-<span class="cstat-no" title="statement not covered" >    return !!(item.gmatcher &amp;&amp; item.gmatcher.match(path))</span>
+<span class="cstat-no" title="statement not covered">  return self.ignore.some(<span class="fstat-no" title="function not covered">function(item) {</span></span>
+<span class="cstat-no" title="statement not covered">    return !!(item.gmatcher &amp;&amp; item.gmatcher.match(path))</span>
   })
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
     <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sat Apr 15 2017 21:36:47 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
