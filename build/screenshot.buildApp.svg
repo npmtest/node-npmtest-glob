@@ -1,0 +1,111 @@
+<svg height="990" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="990" fill="#555" width="720"></rect>
+<text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
+<tspan x="10" y="26"></tspan>
+
+<tspan x="10" y="42">[MODE_BUILD=buildApp] - 2018-06-19T14:43:20.282Z - npm-testing /home/travis/build/npmtest/node-n\</tspan>
+<tspan x="10" y="58">pmtest-glob</tspan>
+
+<tspan x="10" y="74"></tspan>
+
+<tspan x="10" y="90"></tspan>
+
+<tspan x="10" y="106">buildApp - merged test-report from file /home/travis/build/npmtest/node-npmtest-glob/tmp/build/t\</tspan>
+<tspan x="10" y="122">est-report.json</tspan>
+
+<tspan x="10" y="138">&gt; server listening on http-port 47295</tspan>
+
+<tspan x="10" y="154">apidocCreate - readExample /home/travis/build/npmtest/node-npmtest-glob/node_modules/glob/packag\</tspan>
+<tspan x="10" y="170">e.json</tspan>
+
+<tspan x="10" y="186">apidocCreate - readExample /home/travis/build/npmtest/node-npmtest-glob/node_modules/glob/change\</tspan>
+<tspan x="10" y="202">log.md</tspan>
+
+<tspan x="10" y="218">apidocCreate - readExample /home/travis/build/npmtest/node-npmtest-glob/node_modules/glob/common\</tspan>
+<tspan x="10" y="234">.js</tspan>
+
+<tspan x="10" y="250">apidocCreate - readExample /home/travis/build/npmtest/node-npmtest-glob/node_modules/glob/.gitig\</tspan>
+<tspan x="10" y="266">nore</tspan>
+
+<tspan x="10" y="282">apidocCreate - readExample /home/travis/build/npmtest/node-npmtest-glob/node_modules/glob/glob.j\</tspan>
+<tspan x="10" y="298">s</tspan>
+
+<tspan x="10" y="314">apidocCreate - readExample /home/travis/build/npmtest/node-npmtest-glob/node_modules/glob/LICENS\</tspan>
+<tspan x="10" y="330">E</tspan>
+
+<tspan x="10" y="346">apidocCreate - readExample /home/travis/build/npmtest/node-npmtest-glob/node_modules/glob/packag\</tspan>
+<tspan x="10" y="362">e.json</tspan>
+
+<tspan x="10" y="378">apidocCreate - readExample /home/travis/build/npmtest/node-npmtest-glob/node_modules/glob/README\</tspan>
+<tspan x="10" y="394">.md</tspan>
+
+<tspan x="10" y="410">apidocCreate - readExample /home/travis/build/npmtest/node-npmtest-glob/node_modules/glob/sync.j\</tspan>
+<tspan x="10" y="426">s</tspan>
+
+<tspan x="10" y="442">apidocCreate - requiring /home/travis/build/npmtest/node-npmtest-glob/node_modules/glob ...</tspan>
+
+<tspan x="10" y="458">apidocCreate - ... required /home/travis/build/npmtest/node-npmtest-glob/node_modules/glob</tspan>
+
+<tspan x="10" y="474">apidocCreate - libFile common.js</tspan>
+
+<tspan x="10" y="490">apidocCreate - libFile sync.js</tspan>
+
+<tspan x="10" y="506">created customOrg file /home/travis/build/npmtest/node-npmtest-glob/README.md</tspan>
+
+<tspan x="10" y="522"></tspan>
+
+<tspan x="10" y="538">(node:5727) DeprecationWarning: _linklist module is deprecated. Please use a userland alternativ\</tspan>
+<tspan x="10" y="554">e.</tspan>
+
+<tspan x="10" y="570">(node:5727) DeprecationWarning: sys is deprecated. Use util instead.</tspan>
+
+<tspan x="10" y="586">&gt; server listening on http-port 41008</tspan>
+
+<tspan x="10" y="602">[node test-case 1 of 1 passed] - testCase_buildApp_default</tspan>
+
+<tspan x="10" y="618"></tspan>
+
+<tspan x="10" y="634">buildApp - merged test-report from file /home/travis/build/npmtest/node-npmtest-glob/tmp/build/t\</tspan>
+<tspan x="10" y="650">est-report.json</tspan>
+
+<tspan x="10" y="666"></tspan>
+
+<tspan x="10" y="682">-------------------------------------------------------</tspan>
+
+<tspan x="10" y="698">| test-report - buildApidoc - node - linux v6.14.3 - 2018-06-19T14:42:47.864Z</tspan>
+
+<tspan x="10" y="714">|   38415 ms            0 failed        1 passed      |</tspan>
+
+<tspan x="10" y="730">-------------------------------------------------------</tspan>
+
+<tspan x="10" y="746">| test-report - buildApp - node - linux v6.14.3 - 2018-06-19T14:42:19.049Z</tspan>
+
+<tspan x="10" y="762">|   25803 ms            0 failed        8 passed      |</tspan>
+
+<tspan x="10" y="778">-------------------------------------------------------</tspan>
+
+<tspan x="10" y="794">| test-report - npmTest - browser - / - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTM\</tspan>
+<tspan x="10" y="810">L, like Gecko) Chrome/58.0.3029.110 Electron/1.7.15 Safari/537.36 - 2018-06-19T14:42:30.158Z</tspan>
+
+<tspan x="10" y="826">|      39 ms            0 failed        8 passed      |</tspan>
+
+<tspan x="10" y="842">-------------------------------------------------------</tspan>
+
+<tspan x="10" y="858"></tspan>
+
+<tspan x="10" y="874">created test-report file /home/travis/build/npmtest/node-npmtest-glob/tmp/build/test-report.html</tspan>
+
+<tspan x="10" y="890"></tspan>
+
+<tspan x="10" y="906"></tspan>
+
+<tspan x="10" y="922">buildApp - 0 failed tests</tspan>
+
+<tspan x="10" y="938"></tspan>
+
+<tspan x="10" y="954"></tspan>
+
+<tspan x="10" y="970">[MODE_BUILD=buildApp] - 2018-06-19T14:43:27.800Z - EXIT_CODE - 0</tspan>
+
+</text>
+</svg>
